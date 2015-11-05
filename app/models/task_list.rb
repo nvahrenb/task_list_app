@@ -1,3 +1,3 @@
 class TaskList < ActiveRecord::Base
-	has_many :Tasks
+	has_many :tasks
 end

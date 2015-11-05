@@ -1,0 +1,79 @@
+  [1m[36m (310.6ms)[0m  [1mCREATE TABLE "task_lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (32.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (101.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (66.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151103143330')
+  [1m[36m (1.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151029135522')[0m
+  [1m[35m (1.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151029135552')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "task_lists"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 298486374)[0m
+  [1m[35m (29.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "task_lists"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 298486374)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "task_lists"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 298486374)[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "task_lists"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 298486374)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "task_lists"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 298486374)[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "task_lists"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 298486374)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "task_lists"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 298486374)[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "task_lists"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 298486374)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "task_lists"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 298486374)[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "task_lists"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 298486374)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "task_lists"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 298486374)[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "task_lists"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 298486374)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "task_lists"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 298486374)[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "task_lists"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "task_lists" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-11-05 00:01:46', '2015-11-05 00:01:46', 298486374)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m

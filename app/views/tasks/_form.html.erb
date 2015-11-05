@@ -28,6 +28,10 @@
     <%= f.date_select :due_date %>
   </div>
   <div class="field">
+    <%= f.label :task_list %><br>
+    <%= f.collection_select :task_list, TaskList.all, :id, :title,prompt: true %>
+  </div>
+  <div class="field">
     <%= f.label :is_completed %><br>
     <%= f.check_box :is_completed %>
   </div>
