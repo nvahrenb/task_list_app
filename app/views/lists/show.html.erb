@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @list.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @list.description %>
+</p>
+
+<p>
+	<strong>Tasks</strong>
+	<ul>
+		<% Task.all.each do |task| %>
+			<% if List.find(task.list_name).title == @list.title %>
+			<li><%= task.title %></li>
+			<% end %>
+		<% end %>
+	</ul>
+</p>
+
+<%= link_to 'Edit', edit_list_path(@list) %> |
+<%= link_to 'Back', lists_path %>
