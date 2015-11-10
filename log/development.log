@@ -1897,3 +1897,362 @@ Processing by TasksController#index as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", "2"]]
   Rendered tasks/index.html.erb within layouts/application (20.6ms)
 Completed 200 OK in 97ms (Views: 90.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/lists/new" for ::1 at 2015-11-10 09:50:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (17.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ListsController#new as HTML
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/nvahren/Dropbox/notre_dame/web_applications/task_list_app/app/models/list.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+	validates :title, presence :true, uniqueness :true
+	                            ^
+/Users/nvahren/Dropbox/notre_dame/web_applications/task_list_app/app/models/list.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+	validates :description, presence :true
+	                                  ^):
+  app/models/list.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/list.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/lists_controller.rb:17:in `new'
+
+
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (109.0ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (92.1ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (246.7ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-10 09:50:43 -0500
+Processing by TasksController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/nvahren/Dropbox/notre_dame/web_applications/task_list_app/app/models/task.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+	validates :title, presence :true
+	                            ^
+/Users/nvahren/Dropbox/notre_dame/web_applications/task_list_app/app/models/task.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...validates :priority, presence :true, :inclusion => { :in => ...
+...                               ^
+/Users/nvahren/Dropbox/notre_dame/web_applications/task_list_app/app/models/task.rb:4: syntax error, unexpected ',', expecting keyword_end
+...:inclusion => { :in => 1..10 }, numericality: { only_integer...
+...                               ^
+/Users/nvahren/Dropbox/notre_dame/web_applications/task_list_app/app/models/task.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+	validates :due_date, presence :true
+	                               ^
+/Users/nvahren/Dropbox/notre_dame/web_applications/task_list_app/app/models/task.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+	validates :list_name, presence :true
+	                                ^):
+  app/models/task.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/task.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/task.rb:4: syntax error, unexpected ',', expecting keyword_end
+  app/models/task.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/task.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/tasks_controller.rb:17:in `new'
+
+
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.0ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (87.6ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (190.6ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-10 09:52:33 -0500
+Processing by TasksController#new as HTML
+  Rendered tasks/_form.html.erb (81.4ms)
+  Rendered tasks/new.html.erb within layouts/application (85.9ms)
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 0.9ms)
+
+SyntaxError (/Users/nvahren/Dropbox/notre_dame/web_applications/task_list_app/app/models/list.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+	validates :title, presence :true, uniqueness :true
+	                            ^
+/Users/nvahren/Dropbox/notre_dame/web_applications/task_list_app/app/models/list.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+	validates :description, presence :true
+	                                  ^):
+  app/models/list.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/list.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb___833698665123597018_70170893404000'
+  app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb___833698665123597018_70170893404000'
+  app/views/tasks/new.html.erb:3:in `_app_views_tasks_new_html_erb___2705030603473913859_70170893440500'
+
+
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.0ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (110.3ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (87.0ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (189.1ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-10 09:53:00 -0500
+Processing by TasksController#new as HTML
+  [1m[35mList Load (18.9ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered tasks/_form.html.erb (74.7ms)
+  Rendered tasks/new.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 1461ms (Views: 1427.8ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-10 09:53:01 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-10 09:53:01 -0500
+
+
+Started GET "/assets/lists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-10 09:53:01 -0500
+
+
+Started GET "/assets/scaffolds.self-0df4437eb0614252c8939408f0c06373f62af1e7702cf51e651a090a501e796a.css?body=1" for ::1 at 2015-11-10 09:53:01 -0500
+
+
+Started GET "/assets/lists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-10 09:53:01 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-10 09:53:01 -0500
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-10 09:53:01 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-10 09:53:01 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-10 09:53:01 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-10 09:53:01 -0500
+
+
+Started GET "/lists/new" for ::1 at 2015-11-10 09:53:10 -0500
+Processing by ListsController#new as HTML
+  Rendered lists/_form.html.erb (5.5ms)
+  Rendered lists/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 159ms (Views: 157.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/lists" for ::1 at 2015-11-10 09:53:15 -0500
+Processing by ListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fbPcTmDRs7asLqUzYoO0qeumKobnIZYRN2Xh0GCyLk6Px9GSqD5MZEhkffN4eOxW4e0WO1Szjhg1CEZEkA29Kg==", "list"=>{"title"=>"list 1", "description"=>""}, "commit"=>"Create List"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mList Exists (0.2ms)[0m  SELECT  1 AS one FROM "lists" WHERE "lists"."title" = 'list 1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered lists/_form.html.erb (8.0ms)
+  Rendered lists/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 312ms (Views: 98.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/lists" for ::1 at 2015-11-10 09:53:23 -0500
+Processing by ListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tfoT6XSgGjxRyIz431dM/m4wO+DTlP4WkqM9Q0u6/NhHjh41vE/l7rWCVDjFrBQBZHsHXWAG5h+QzprXuwVvvA==", "list"=>{"title"=>"list 3", "description"=>"asdf"}, "commit"=>"Create List"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mList Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "lists" WHERE "lists"."title" = 'list 3' LIMIT 1[0m
+  [1m[35mSQL (17.0ms)[0m  INSERT INTO "lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "list 3"], ["description", "asdf"], ["created_at", "2015-11-10 14:53:23.143181"], ["updated_at", "2015-11-10 14:53:23.143181"]]
+  [1m[36m (21.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/lists/3
+Completed 302 Found in 51ms (ActiveRecord: 39.1ms)
+
+
+Started GET "/lists/3" for ::1 at 2015-11-10 09:53:23 -0500
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mList Load (0.3ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (13.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  [1m[35mList Load (0.1ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mList Load (0.1ms)[0m  [1mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered lists/show.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 179ms (Views: 97.7ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-10 09:53:30 -0500
+Processing by TasksController#new as HTML
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  Rendered tasks/_form.html.erb (6.8ms)
+  Rendered tasks/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 93ms (Views: 92.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/tasks" for ::1 at 2015-11-10 09:53:32 -0500
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vW3u130k4+ZCv/fSlfoTiKZ0UF2vtUOrc882nmiaxm1PGeMLtcscNKb1LxKPAUt3rD9s4BwnW6JxopEKmCVVCQ==", "task"=>{"title"=>"", "description"=>"", "priority"=>"", "due_date(1i)"=>"2015", "due_date(2i)"=>"11", "due_date(3i)"=>"10", "is_completed"=>"0", "list_name"=>""}, "commit"=>"Create Task"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mList Load (0.2ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered tasks/_form.html.erb (9.5ms)
+  Rendered tasks/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 96ms (Views: 87.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tasks" for ::1 at 2015-11-10 09:53:49 -0500
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gB4SNGnUWlFw33M30UDnBnlS6xMbAh9mdqDP3DV0BSxyah/ooTulg5SVq/fLu7/5cxnXrqiQB290zWhIxcuWSA==", "task"=>{"title"=>"asdfasdf", "description"=>"", "priority"=>"11", "due_date(1i)"=>"2015", "due_date(2i)"=>"11", "due_date(3i)"=>"10", "is_completed"=>"0", "list_name"=>"2"}, "commit"=>"Create Task"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  Rendered tasks/_form.html.erb (8.1ms)
+  Rendered tasks/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 93ms (Views: 83.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-10 09:55:21 -0500
+Processing by TasksController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/nvahren/Dropbox/notre_dame/web_applications/task_list_app/app/models/task.rb:6: syntax error, unexpected =>, expecting keyword_end
+		:message => "Priority must be between 1-10"
+		           ^):
+  app/models/task.rb:6: syntax error, unexpected =>, expecting keyword_end
+  app/controllers/tasks_controller.rb:17:in `new'
+
+
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.3ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (89.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (202.2ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-10 09:56:13 -0500
+Processing by TasksController#new as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+ArgumentError (Unknown validator: 'MessageValidator'):
+  app/models/task.rb:5:in `<class:Task>'
+  app/models/task.rb:1:in `<top (required)>'
+  app/controllers/tasks_controller.rb:17:in `new'
+
+
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (83.0ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (193.2ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-10 09:56:33 -0500
+Processing by TasksController#new as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ArgumentError (Unknown validator: 'MessageValidator'):
+  app/models/task.rb:5:in `<class:Task>'
+  app/models/task.rb:1:in `<top (required)>'
+  app/controllers/tasks_controller.rb:17:in `new'
+
+
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (111.0ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.2ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (196.2ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-10 09:57:01 -0500
+Processing by TasksController#new as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ArgumentError (Unknown validator: 'MessageValidator'):
+  app/models/task.rb:5:in `<class:Task>'
+  app/models/task.rb:1:in `<top (required)>'
+  app/controllers/tasks_controller.rb:17:in `new'
+
+
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.3ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (82.6ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/nvahren/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (180.1ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-11-10 09:57:33 -0500
+Processing by TasksController#new as HTML
+  [1m[35mList Load (0.2ms)[0m  SELECT "lists".* FROM "lists"
+  Rendered tasks/_form.html.erb (17.5ms)
+  Rendered tasks/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 110ms (Views: 92.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-10 09:57:33 -0500
+
+
+Started GET "/assets/lists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-10 09:57:33 -0500
+
+
+Started GET "/assets/scaffolds.self-0df4437eb0614252c8939408f0c06373f62af1e7702cf51e651a090a501e796a.css?body=1" for ::1 at 2015-11-10 09:57:33 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-10 09:57:33 -0500
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-10 09:57:33 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-10 09:57:33 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-10 09:57:33 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-10 09:57:33 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-10 09:57:33 -0500
+
+
+Started GET "/assets/lists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-10 09:57:33 -0500
+
+
+Started POST "/tasks" for ::1 at 2015-11-10 09:57:36 -0500
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8D3/i6gyvRo4Xk4KmVi4no1qmg+HfFXzf4h5WaxmTWcCSfJXYN1CyNwUlsqDo+BhhyGmsjTuTfp95d7NXNneAw==", "task"=>{"title"=>"", "description"=>"", "priority"=>"", "due_date(1i)"=>"2015", "due_date(2i)"=>"11", "due_date(3i)"=>"10", "is_completed"=>"0", "list_name"=>""}, "commit"=>"Create Task"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mList Load (0.2ms)[0m  [1mSELECT "lists".* FROM "lists"[0m
+  Rendered tasks/_form.html.erb (12.4ms)
+  Rendered tasks/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 104ms (Views: 94.1ms | ActiveRecord: 0.4ms)
