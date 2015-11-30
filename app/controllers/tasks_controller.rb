@@ -69,6 +69,7 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.require(:task).permit(:title, :description, :priority, :due_date, :is_completed, :list_name)
+      #jarp you need to allow list_id, not list_name
+      params.require(:task).permit(:title, :description, :priority, :due_date, :is_completed, :list_id)
     end
 end

@@ -23,6 +23,10 @@
         <td><%= task.priority %></td>
         <td><%= task.due_date %></td>
         <td><%= task.is_completed %></td>
+        <!-- jarp:
+              you don't want to do this. 1. your view is calling a model and 2. because of ActiveRecord, you already have
+              the list it belongs to (if setup correctly). you just have to call .list on the task object and you will get the correct record
+         -->
         <td><%= List.find(task.list_name).title %></td>
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>

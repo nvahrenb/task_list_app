@@ -33,7 +33,8 @@
   </div>
   <div class="field">
     <%= f.label :list_name %><br>
-    <%= f.collection_select :list_name, List.all, :id, :title,prompt: true %>
+    <%# jarp: you need to submit list_id for the association %>
+    <%= f.collection_select :list_name, List.all, :id, :title, prompt: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
