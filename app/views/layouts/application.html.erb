@@ -8,6 +8,14 @@
 </head>
 <body>
 
+	<div class="sidebar">
+		<ul>
+			<% @all_task_lists.each do |list_item| %>
+				<li><a href= <%= list_item %> > <%= list_item.name %> </a></li>
+			<% end %>
+		</ul>
+	</div>
+
 <%= yield %>
 
 </body>
