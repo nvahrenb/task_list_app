@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151105005325) do
+ActiveRecord::Schema.define(version: 20151201133156) do
 
-  create_table "lists", force: :cascade do |t|
-    t.string   "title"
+  create_table "task_lists", force: :cascade do |t|
+    t.string   "name"
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -25,10 +25,12 @@ ActiveRecord::Schema.define(version: 20151105005325) do
     t.text     "description"
     t.integer  "priority"
     t.date     "due_date"
-    t.boolean  "is_completed"
-    t.string   "list_name"
+    t.boolean  "is_complete"
+    t.integer  "task_list_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
+
+  add_index "tasks", ["task_list_id"], name: "index_tasks_on_task_list_id"
 
 end

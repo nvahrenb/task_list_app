@@ -28,12 +28,12 @@
     <%= f.date_select :due_date %>
   </div>
   <div class="field">
-    <%= f.label :is_completed %><br>
-    <%= f.check_box :is_completed %>
+    <%= f.label :is_complete %><br>
+    <%= f.check_box :is_complete %>
   </div>
   <div class="field">
-    <%= f.label :list_name %><br>
-    <%= f.collection_select :list_name, List.all, :id, :title,prompt: true %>
+    <%= f.label :task_list_id %><br>
+    <%= f.collection_select :task_list_id, TaskList.all, :id, :name, prompt: 'Please select a task list' %>
   </div>
   <div class="actions">
     <%= f.submit %>

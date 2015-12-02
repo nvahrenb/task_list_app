@@ -21,13 +21,13 @@
 </p>
 
 <p>
-  <strong>Is completed:</strong>
-  <%= @task.is_completed %>
+  <strong>Is complete:</strong>
+  <%= @task.is_complete %>
 </p>
 
 <p>
-  <strong>List:</strong>
-  <%= List.find(@task.list_name).title %>
+  <strong>Task list:</strong>
+  <%= @task.task_list %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
