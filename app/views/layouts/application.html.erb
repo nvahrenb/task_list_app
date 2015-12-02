@@ -2,13 +2,14 @@
 <html>
 <head>
   <title>TodoStarter</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  
+  <%= stylesheet_link_tag 'site' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-	<div class="sidebar">
+	<div class="sidebar" id="sidebar">
 		<ul>
 			<% @all_task_lists.each do |list_item| %>
 				<li><a href="/task_lists/<%=list_item.id%>"> <%= list_item.name %> </a></li>
