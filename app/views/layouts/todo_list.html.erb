@@ -15,7 +15,6 @@
 		<% if flash[:message] %>
 		<p class="flash­message"><%= flash[:message] %></p>
 		<% end %>
-		<%= yield %>
 	</div>
 
 	<div class="sidebar" id="sidebar">
@@ -24,7 +23,11 @@
 				<li><a href="/task_lists/<%=list_item.id%>"> <%= list_item.name %> </a></li>
 			<% end %>
 		</ul>
-		<%= link_to 'Login', login_path %>
+		<% if session[:user_id] %>
+			<%= link_to 'Logout', logout_path %>
+		<% else %>
+			<%= link_to 'Login', login_path %>
+		<% end %>
 	</div>
 
 <%= yield %>
