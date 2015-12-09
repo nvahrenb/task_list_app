@@ -1,5 +1,6 @@
 class Task < ActiveRecord::Base
   belongs_to :task_list
+  belongs_to :user
 
   validates :title, :priority, :due_date, presence: true
   validates :task_list, presence: {message: 'must be selected' }

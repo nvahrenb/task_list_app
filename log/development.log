@@ -2420,3 +2420,166 @@ Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4
 
 
 Started GET "/assets/site.self-54e4a0d84356d6265b7bcffb68b0265ccdba7ed1289621e9492ee21a96110a2e.css?body=1" for ::1 at 2015-12-02 16:51:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (110.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20151209142802)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (16.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "username" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151209142802"]]
+  [1m[36m (129.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_task_list_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_task_list_id' AND type='index'
+[0m
+
+
+Started GET "/users" for ::1 at 2015-12-09 09:28:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mTaskList Load (0.3ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (90.5ms)
+Completed 200 OK in 1108ms (Views: 1068.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-09 09:28:35 -0500
+
+
+Started GET "/users/new" for ::1 at 2015-12-09 09:28:39 -0500
+Processing by UsersController#new as HTML
+  [1m[35mTaskList Load (0.2ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered users/_form.html.erb (90.9ms)
+  Rendered users/new.html.erb within layouts/application (124.9ms)
+Completed 200 OK in 197ms (Views: 188.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2015-12-09 09:28:51 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F2pVcqVm8aHOdUJtqtj94K+YxefRoo6Ifc4k7HC5nrmJnDI1qyrPMC03v/CfXqDV2/g4Yyzj9h9VEqOEOjkanA==", "user"=>{"first_name"=>"bob", "last_name"=>"smith", "username"=>"bobsmith", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTaskList Load (0.2ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "bob"], ["last_name", "smith"], ["username", "bobsmith"], ["password", "bobsmith"], ["created_at", "2015-12-09 14:28:51.789356"], ["updated_at", "2015-12-09 14:28:51.789356"]]
+  [1m[35m (70.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 79ms (ActiveRecord: 71.0ms)
+
+
+Started GET "/users/1" for ::1 at 2015-12-09 09:28:51 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTaskList Load (0.2ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 207ms (Views: 65.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2015-12-09 09:28:53 -0500
+Processing by UsersController#index as HTML
+  [1m[36mTaskList Load (0.2ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for ::1 at 2015-12-09 09:28:55 -0500
+Processing by UsersController#new as HTML
+  [1m[36mTaskList Load (0.2ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered users/_form.html.erb (3.1ms)
+  Rendered users/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for ::1 at 2015-12-09 09:29:04 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XCXi++4RuL45wn3YtAMW4ELuSqLNsvBGqeuz1Pv3ycHC04W84F2GL9qAgEWBhUvVNo63JjDziNGBNzS8sXdN5A==", "user"=>{"first_name"=>"jerry", "last_name"=>"smith", "username"=>"jerrysmith", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35mTaskList Load (0.2ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("first_name", "last_name", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "jerry"], ["last_name", "smith"], ["username", "jerrysmith"], ["password", "jerrysmith"], ["created_at", "2015-12-09 14:29:04.591152"], ["updated_at", "2015-12-09 14:29:04.591152"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users/2" for ::1 at 2015-12-09 09:29:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTaskList Load (0.4ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 165ms (Views: 161.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2015-12-09 09:29:08 -0500
+Processing by UsersController#index as HTML
+  [1m[35mTaskList Load (0.2ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 79ms (Views: 77.8ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserIdToTasks (20151209142945)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (25.7ms)[0m  [1mALTER TABLE "tasks" ADD "user_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151209142945"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_task_list_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_task_list_id' AND type='index'
+[0m
+
+
+Started GET "/users" for ::1 at 2015-12-09 09:38:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mTaskList Load (0.2ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 386ms (Views: 362.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/site.self-54e4a0d84356d6265b7bcffb68b0265ccdba7ed1289621e9492ee21a96110a2e.css?body=1" for ::1 at 2015-12-09 09:38:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-09 09:38:22 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-09 09:38:22 -0500
+
+
+Started GET "/assets/task_lists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-09 09:38:22 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-09 09:38:22 -0500
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-09 09:38:22 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-12-09 09:38:22 -0500
+
+
+Started GET "/tasks" for ::1 at 2015-12-09 09:38:38 -0500
+Processing by TasksController#index as HTML
+  [1m[35mTaskList Load (0.3ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  [1m[35mTaskList Load (0.2ms)[0m  SELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered tasks/index.html.erb within layouts/application (60.8ms)
+Completed 200 OK in 186ms (Views: 133.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-12-09 09:38:42 -0500
+Processing by TasksController#new as HTML
+  [1m[36mTaskList Load (0.3ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered tasks/_form.html.erb (90.8ms)
+  Rendered tasks/new.html.erb within layouts/application (96.3ms)
+Completed 200 OK in 160ms (Views: 158.3ms | ActiveRecord: 0.5ms)
