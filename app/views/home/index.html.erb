@@ -1,2 +1,17 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Home</h1>
+
+<% user = User.find_by_id(session[:user_id]) %>
+<h2>Tasks</h2>
+<ul>
+
+<% Task.all.each do |task| %>
+	<% if task.user_id == user.id %>
+		<li><%= task.title %></li>
+	<% end %>
+<% end %>
+
+</ul>
+
+
+
+
