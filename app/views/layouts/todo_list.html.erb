@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tasklist</title>
+  <title>TodoStarter</title>
+  
+  <%= stylesheet_link_tag 'site' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="header">
 
+	<div class="header" id="header"></div>
+
+	<div id="primary">
+		<% if flash[:message] %>
+		<p class="flash­message"><%= flash[:message] %></p>
+		<% end %>
+		<%= yield %>
 	</div>
 
-	<div class="sidebar">
+	<div class="sidebar" id="sidebar">
 		<ul>
 			<% @all_task_lists.each do |list_item| %>
-				<li><a href= <%= list_item %> > <%= list.item.title %> </a></li>
+				<li><a href="/task_lists/<%=list_item.id%>"> <%= list_item.name %> </a></li>
 			<% end %>
 		</ul>
+		<%= link_to 'Login', login_path %>
 	</div>
 
-	<div class="footer">
+<%= yield %>
 
-	</div>
+<div class="footer" id="footer"></div>
 
 </body>
 </html>

@@ -9,12 +9,20 @@
 </head>
 <body>
 
+	<div id="primary">
+		<% if flash[:message] %>
+		<p class="flash­message"><%= flash[:message] %></p>
+		<% end %>
+		<%= yield %>
+	</div>
+
 	<div class="sidebar" id="sidebar">
 		<ul>
 			<% @all_task_lists.each do |list_item| %>
 				<li><a href="/task_lists/<%=list_item.id%>"> <%= list_item.name %> </a></li>
 			<% end %>
 		</ul>
+		<%= link_to 'Login', login_path %>
 	</div>
 
 <%= yield %>
