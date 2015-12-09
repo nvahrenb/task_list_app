@@ -6167,3 +6167,52 @@ Processing by HomeController#index as HTML
   [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
   Rendered home/index.html.erb within layouts/application (1.4ms)
 Completed 200 OK in 89ms (Views: 87.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-09 11:46:32 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mTaskList Load (0.2ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered home/index.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 426ms (Views: 396.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/logout" for ::1 at 2015-12-09 11:46:34 -0500
+Processing by LoginController#logout as HTML
+  [1m[36mTaskList Load (0.2ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2015-12-09 11:46:34 -0500
+Processing by LoginController#index as HTML
+  [1m[35mTaskList Load (0.3ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered login/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 115ms (Views: 114.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for ::1 at 2015-12-09 11:46:38 -0500
+Processing by TasksController#index as HTML
+  [1m[36mTaskList Load (0.3ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  [1m[36mTaskList Load (0.2ms)[0m  [1mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered tasks/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 91ms (Views: 89.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-12-09 11:47:24 -0500
+Processing by HomeController#index as HTML
+  [1m[36mTaskList Load (0.2ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2015-12-09 11:47:24 -0500
+Processing by LoginController#index as HTML
+  [1m[35mTaskList Load (0.2ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered login/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 104ms (Views: 103.2ms | ActiveRecord: 0.2ms)
